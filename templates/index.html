@@ -28,7 +28,19 @@
             <input type="submit" value="Post" id="submit">
         </form>
     </div>
-    <div id="why"></div>
+    {% block content %}
+        <div id="why">
+            <br>
+            <br>
+            {% for message in messages %}
+                <div class="post">
+                    <h2>{{ message['title'] }}</h2>
+                    <h4>{{ message['name'] }}</h4>
+                    <p>{{ message['body'] }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    {% endblock %}
     <script src="{{ url_for('static', filename= 'js/script.js') }}"></script>
 </body>
 </html>
