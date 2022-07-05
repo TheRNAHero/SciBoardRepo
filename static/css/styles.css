@@ -139,8 +139,11 @@ body{
     padding:3%;
     margin:5px;
     overflow-y: scroll;
-    position:relative;
+    position: relative;
+    word-wrap: break-word;
 }
 p, h2, h4{
-    position: relative;
+    margin:1px;
+    padding:5px;
+
 }
