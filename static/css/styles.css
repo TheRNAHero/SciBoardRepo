@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+#navbar{
+    width:100vw;
+    height:30px;
+    padding:0;
+    margin:0;
+    position:fixed;
+    top:0;
+}
+#home{
+    width:10vw !important;
+}
+body{
+    padding:0;
+    margin:0;
+}
+*{
+    border:0;
+    padding:0;
+    margin:0;
+}
+.otherpage{
+    padding:0;
+    margin: 0;
+    border:0;
+    width:15vw;
+    color:white;
+    background-color: #180a5e;
+    float: left;
+    height:30px;
+    font-family: 'roboto', sans-serif;
+    font-weight: bold;
+}
+.otherpage:hover{
+    background-color: #070e39;
+}
+body{
+    background-color:#070e39;
+    padding:0;
+    margin: 0;
+}
+#post{
+    width:40vw;
+    height:100vh;
+    float:left;
+}
+#postform{
+    width:30vw;
+    height: 70vh;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 15%;
+    margin-bottom: 15%;
+}
+#name{
+    width:30vw;
+    height: 3vh;
+    background-color: #180a5e;
+    border:none;
+    color:white;
+    font-family: 'roboto', sans-serif;
+    border-radius: 5px;
+    margin:5px;
+    padding: 3px;
+}
+#title{
+    width:30vw;
+    height: 5vh;
+    background-color: #180a5e;
+    border:none;
+    color:white;
+    font-family: 'roboto', sans-serif;
+    border-radius: 5px; 
+    margin:5px;   
+    padding: 3px;
+}
+#title::placeholder{
+    color:white;
+    font-family: 'roboto', sans-serif;
+    opacity:1;
+    margin:5px;
+}
+
+#name::placeholder{
+    color:white;
+    font-family: 'roboto', sans-serif;
+    opacity:1;
+    font-size: 10px;
+    padding:3px;
+}
+#body{
+    width:30vw;
+    height: 40vh;
+    background-color: #180a5e;
+    border:none;
+    color:white;
+    font-family: 'roboto', sans-serif;
+    border-radius: 5px; 
+    margin:5px;   
+    resize:none; 
+    padding: 3px;
+}
+#body::placeholder{
+    color:white;
+    font-family: 'roboto', sans-serif;
+    opacity:1;
+    padding:3px;
+}
+#submit{
+    margin: 5px;
+    width:30vw;
+    padding:3px;
+    color:white;
+    font-family: 'roboto', sans-serif;
+    background-color: #180a5e;
+    border-radius: 3px;
+}
+#why{
+    /*why*/
+    width:58vw;
+    overflow-y: visible;
+    background-color:green;
+    height:70px;
+    float:left;
+    margin:0;
+    padding: 0;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename= 'css/styles.css') }}" />
+    <title>SciChat</title>
+</head>
+<body>
+    <div id="navbar">
+      <button id="home" class="otherpage">Home</button>
+      <button class="otherpage">Baer</button> 
+      <button class="otherpage">Rosie</button> 
+      <button class="otherpage">Ramon</button> 
+      <button class="otherpage">Elion</button> 
+      <button class="otherpage">Sagan</button> 
+      <button class="otherpage">Katz</button> 
+    </div>
+    <div id="post">
+        <form name="postform" id="postform" action="/processer" method="POST">
+            <input type="text" name='title' id="title" autocomplete="off" onkeyup="countChars(this, 30)"placeholder="Title">
+            <br>
+            <input type="text" name='name' autocomplete="off" id="name" onkeyup="countChars(this, 25)" placeholder="Name">
+            <br>
+            <textarea id="body"  name='body' autocomplete="off" placeholder="Body" onkeyup="countChars(this, 500)"></textarea>
+            <br>
+            <input type="submit" value="Post" id="submit">
+        </form>
+    </div>
+    <div id="why"></div>
+    <script src="{{ url_for('static', filename= 'js/script.js') }}"></script>
+</body>
+</html>
