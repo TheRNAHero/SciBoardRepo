@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename= 'css/styles.css') }}" />
-    <title>SciChat</title>
+    <title>SciBoard</title>
+    <script src="{{ url_for('static', filename='js/pw.js') }}"></script>
 </head>
-<body>
+<body onload="pw()">
     <div id="navbar">
       <button id="home" class="otherpage">Home</button>
       <button class="otherpage">Baer</button> 

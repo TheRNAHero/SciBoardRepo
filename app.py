@@ -9,11 +9,11 @@ messages=[]
 @app.route('/')
 def backend():
     global messages
-    print("backend", messages)
+    #print("backend", messages)
     f=open('posts.json')
     messages=json.load(f)
     f.close()
-    print("backend end", messages)
+    #print("backend end", messages)
     return render_template('index.html', messages=messages)
 
 #process form data
@@ -22,7 +22,7 @@ def backend():
 def iGetItNow():
 
     global messages
-    print("processer", messages)
+    #print("processer", messages)
     if request.method=='POST':
         title=request.form['title']
         namee=request.form['name']
@@ -32,7 +32,7 @@ def iGetItNow():
        pass
     else:
        messages.insert(0, {'title': title, 'name': namee, 'body':content})
-       print("processer mid", messages)
+       #print("processer mid", messages)
        x=json.dumps(messages)
        if len(messages)>2:
          print(len(messages))
@@ -41,7 +41,7 @@ def iGetItNow():
        f.write(x)
        f.flush()
        f.close()
-    print("processer end", messages)
+    #print("processer end", messages)
     return redirect(url_for('backend'))
 
 if __name__ == '__main__':
