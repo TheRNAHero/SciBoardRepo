@@ -3,7 +3,7 @@ import secrets
 import json
 app=Flask(__name__)
 app.config['SECRET_KEY']=secrets.token1
-
+#This is a comment
 messages=[]
 #creates site
 @app.route('/')
