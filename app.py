@@ -10,7 +10,7 @@ messages=[]
 def backend():
     global messages
     #print("backend", messages)
-    f=open('posts.json')
+    f=open('C:\gabrielFossner\Sciboard\posts.json')
     messages=json.load(f)
     f.close()
     #print("backend end", messages)
@@ -37,7 +37,7 @@ def iGetItNow():
        if len(messages)>2:
          print(len(messages))
          messages.pop()
-       f=open('posts.json', 'w')
+       f=open('C:\gabrielFossner\Sciboard\posts.json', 'w')
        f.write(x)
        f.flush()
        f.close()
