@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, url_for, flash, redirect
 import secrets
+from better_profanity import profanity
 import json
 app=Flask(__name__)
 app.config['SECRET_KEY']=secrets.token1
@@ -28,15 +29,15 @@ def iGetItNow():
         namee=request.form['name']
         content=request.form['body']
 
-    if title == "" or namee=="" or content=="":
+    if title == "" or namee=="" or content=="" or profanity.contains_profanity(title) or profanity.contains_profanity(namee) or profanity.contains_profanity(content):
        pass
     else:
        messages.insert(0, {'title': title, 'name': namee, 'body':content})
        #print("processer mid", messages)
-       x=json.dumps(messages)
-       if len(messages)>2:
+       if len(messages)>100:
          print(len(messages))
-         messages.pop()
+         messages.pop(len(messages)-1)
+       x=json.dumps(messages)
        f=open('C:\gabrielFossner\Sciboard\posts.json', 'w')
        f.write(x)
        f.flush()
